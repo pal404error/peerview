@@ -8,6 +8,7 @@ import {
   Route,
   Router,
 } from "react-router-dom";
+import { Test } from './page/Test';
 import { NavItem } from 'react-bootstrap';
 
 
@@ -27,6 +28,7 @@ function App() {
   <Route exact path="about" element={<ShowAbout/>} /> */}
 </Routes>
 <Footer />
+<Test/>
 
 </BrowserRouter>
     </div>
