@@ -7,7 +7,8 @@ export const Test = () => {
       <div >Test 30000</div>
       <div> TEst Pal</div>
       <div> Test new</div>
+      <div> test 1234567890</div>
       </>
-    )
+      )
   }
   
