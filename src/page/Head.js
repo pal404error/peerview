@@ -1,11 +1,17 @@
-import React from 'react'
+import * as React from "react"
+import { ColorModeProvider } from "@chakra-ui/color-mode"
 
-const alph =  `
+
+const alph = `
 <section class="relative py-2 bg-yellow-200">
         <div class="flex items-center justify-between h-20 px-8 mx-auto max-w-7xl">
     
-            <a href="/" class="relative z-10 flex items-center w-auto text-2xl font-black leading-none text-gray-900 select-none">Forum.</a>
-    
+            <a href="/" class="relative z-10 flex items-center w-auto text-2xl font-black leading-none text-gray-900 select-none">Peerview.</a>
+
+            <form class="form-inline  my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
             <nav class="items-center justify-center hidden space-x-5 text-gray-200 md:flex lg:space-x-8">
                 <a href="/" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false" class="relative inline-block px-1 text-base font-bold text-gray-700 uppercase transition duration-150 ease hover:text-gray-900">
                     <span class="block">Home</span>
@@ -23,17 +29,26 @@ const alph =  `
                 </a>
                 <div class="w-0 h-5 border border-r border-yellow-500 opacity-25"></div>
     
-                <a href="https://github.com/pal404error" class="relative h-6 group">
-                    <span class="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-yellow-100">Github</span>
+                <a href="/landing" class="relative h-6 group">
+                    <span class="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-yellow-100">Login</span>
                     <span class="absolute top-0 right-0 w-full h-10 -mr-1 bg-black rounded-lg"></span>
                 </a>
     
             </nav>    
         </div>
     </section>`;
+ 
+ 
+    
+      
 export const Head = () => {
-
-  return(
-    <div dangerouslySetInnerHTML={{__html: alph}} />
-  )
+    const { colorMode, toggleColorMode } = useColorMode();
+    
+    return (
+    <><header>
+            <Button onClick={toggleColorMode}>
+                Toggle {colorMode === "light" ? "Dark" : "Light"}
+            </Button>
+        </header><div dangerouslySetInnerHTML={{ __html: alph }} /></>
+    )
 }
