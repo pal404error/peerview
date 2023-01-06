@@ -1,5 +1,4 @@
 import * as React from "react"
-import { ColorModeProvider } from "@chakra-ui/color-mode"
 
 
 const alph = `
@@ -42,13 +41,9 @@ const alph = `
     
       
 export const Head = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
+    
     
     return (
-    <><header>
-            <Button onClick={toggleColorMode}>
-                Toggle {colorMode === "light" ? "Dark" : "Light"}
-            </Button>
-        </header><div dangerouslySetInnerHTML={{ __html: alph }} /></>
+    <><div dangerouslySetInnerHTML={{ __html: alph }} /></>
     )
 }
