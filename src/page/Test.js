@@ -1,4 +1,5 @@
 import React from 'react'
+import { Login_page } from './Login_page'
 
 
 export const Test = () => {
@@ -8,6 +9,7 @@ export const Test = () => {
       <div> TEst Pal</div>
       <div> Test new</div>
       <div> test 1234567</div>
+      
       </>
       )
   }

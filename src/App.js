@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { Test } from './page/Test';
 import { NavItem } from 'react-bootstrap';
+import SignIn, { Login_page } from './page/Login_page';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 </Routes>
 <Footer />
 <Test/>
+<SignIn/>
 
 </BrowserRouter>
     </div>

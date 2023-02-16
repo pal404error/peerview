@@ -13,6 +13,7 @@ const foot = `
             <div class="relative flex flex-col items-center w-full px-6 space-y-5 md:space-x-5 md:space-y-0 md:flex-row md:w-auto lg:flex-shrink-0 md:px-0">
                 <a href="https://github.com/pal404error/react-tvmaze" class="block w-full px-5 py-3 text-base font-medium leading-6 text-center text-purple-600 transition duration-150 ease-in-out bg-purple-100 rounded-md md:inline-flex md:shadow md:w-auto hover:bg-white focus:outline-none focus:shadow-outline">Star it 	&#127775;</a>
                 
+
             </div>
         </div>
     </div>
