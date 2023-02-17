@@ -22,14 +22,16 @@ function App() {
       <BrowserRouter>
 
 {/* <Header title="Todo List" searchBar={true} /> */}
-<Head />
+
 <Routes>
-  {/* <Route exact path="/" element={<Shows />} />
-  <Route exact path="about" element={<ShowAbout/>} /> */}
+  // eslint-disable-next-line no-sequences
+  <Route exact path="/" element={<Head/>} />
+  <Route exact path="login" element={<SignIn/>} />
+  
 </Routes>
-<Footer />
+
 <Test/>
-<SignIn/>
+
 
 </BrowserRouter>
     </div>

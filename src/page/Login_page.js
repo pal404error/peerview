@@ -3,6 +3,7 @@ import "./login_style.css";
 import { auth, provider } from "../firebase";
 import {signInWithPopup} from "firebase/auth";
 import App, { Post } from "./Post.js";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 function SignIn(){
   
@@ -37,11 +38,11 @@ function SignIn(){
                     <i className="fa fa-facebook-square" aria-hidden="true"></i>
                   </button>}
       
-                  <button type="button" className="btn btn-primary btn-floating mx-1">
+                  <button type="button" className="btn btn-primary btn-floating mx-1">Facebook
                     <i className="fa fa-github-square" aria-hidden="true"></i>
                   </button>
       
-                  <button type="button" className="btn btn-primary btn-floating mx-1">
+                  <button type="button" className="btn btn-primary btn-floating mx-1">GitHub
                     <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                   </button>
 

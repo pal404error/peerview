@@ -1,4 +1,5 @@
 import * as React from "react"
+import SignIn, { Login_page } from './Login_page';
 
 
 const alph = `
@@ -28,7 +29,7 @@ const alph = `
                 </a>
                 <div class="w-0 h-5 border border-r border-yellow-500 opacity-25"></div>
     
-                <a href="/landing" class="relative h-6 group">
+                <a href="/login" class="relative h-6 group">
                     <span class="relative z-10 px-5 py-2 font-bold leading-tight text-black bg-white border-4 border-gray-900 rounded-lg group-hover:bg-yellow-100">Login</span>
                     <span class="absolute top-0 right-0 w-full h-10 -mr-1 bg-black rounded-lg"></span>
                 </a>
