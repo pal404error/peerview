@@ -4,14 +4,18 @@ import { auth, provider } from "../firebase";
 import {signInWithPopup} from "firebase/auth";
 import App, { Post } from "./Post.js";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { Homepage } from "./Homepage";
+import { browserHistory, Router, Route, Routes } from 'react-router';
+import {useNavigate} from 'react-router-dom'
 
 function SignIn(){
-  
+      const navigate = useNavigate();
       const [value, setValue] = useState('')
       const handleClick =()=>{
         signInWithPopup(auth, provider).then((data)=>{
           setValue(data.user.email)
           localStorage.setItem("email",data.user.email)
+          navigate("/Homepage")
         })
       }
 
@@ -24,6 +28,11 @@ function SignIn(){
         <>
         <section className="vh-100">
         <div className="container-fluid h-custom">
+
+          <Routes>
+            <Route path="/Homepage" element={<Homepage/>}/>
+          </Routes>
+
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-md-9 col-lg-6 col-xl-5">
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
