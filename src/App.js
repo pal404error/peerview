@@ -7,9 +7,10 @@ import {
   Route,
   Router,
 } from "react-router-dom";
-import { Test } from './page/Test';
+import LogOut, { Test } from './page/Test';
 import { NavItem } from 'react-bootstrap';
 import SignIn, { Login_page } from './page/Login_page';
+import Post, {Post_page} from './page/Post_page';
 
 
 function App() {
@@ -24,14 +25,11 @@ function App() {
 {/* <Header title="Todo List" searchBar={true} /> */}
 
 <Routes>
-  // eslint-disable-next-line no-sequences
-  <Route exact path="/" element={<Head/>} />
+ 
+  <Route exact path="/" element={<LogOut/>} />
   <Route exact path="login" element={<SignIn/>} />
-  
+  <Route exact path="New_Post" element={<Post/>}/>
 </Routes>
-
-<Test/>
-
 
 </BrowserRouter>
     </div>
