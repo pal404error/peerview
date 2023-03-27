@@ -24,11 +24,13 @@ function App() {
 
 {/* <Header title="Todo List" searchBar={true} /> */}
 
+
 <Routes>
  
   <Route exact path="/" element={<LogOut/>} />
-  <Route exact path="login" element={<SignIn/>} />
+  <Route exact path="Login_page" element={<SignIn/>} />
   <Route exact path="New_Post" element={<Post/>}/>
+  <Route exact path="Homepage" element={<LogOut/>}/>
 </Routes>
 
 </BrowserRouter>
