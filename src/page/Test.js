@@ -21,7 +21,7 @@ function LogOut() {
 
   const gotoCreatePost =()=>
   {
-    navigate("/New_Post")
+    navigate("/Post_creation")
   }
 
     return (
