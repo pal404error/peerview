@@ -82,7 +82,7 @@ function CreatePost()
             <div class="container" id="imgBox">
             <textarea id ="textBox" placeholder="Add caption:" onChange={handleCaption}></textarea>
             <input type="file" name="image" id="file" style={{display:"none"}} onChange={handdleImage}/>
-            <label for="file"><img src={require('./images/upload.png')} class="upload-icon" ></img></label>
+            <label for="file"><img src={require('./css/images/upload.png')} class="upload-icon" ></img></label>
             </div>
             </div>
             <div class="submit">
