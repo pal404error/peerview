@@ -13,7 +13,8 @@ import SignIn, { Login_page } from './page/Login_page';
 import Post, {Post_page} from './page/Post_page';
 import CreatePost from './page/Page_creation';
 import ProfileLanding from './page/Profile_landing';
-
+import Feed from './page/Feed';
+import Postn from './page/Postn';
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
   <Route exact path="Homepage" element={<LogOut/>}/>
   <Route exact path="post_creation" element={<CreatePost/>}/>
   <Route exact path="Profile_landing" element={<ProfileLanding/>}/>
+  <Route exact path="Feed" element={<Feed/>}/>
+  <Route exact path="Create_new_post" element={<Postn/>}/>
 </Routes>
 
 </BrowserRouter>

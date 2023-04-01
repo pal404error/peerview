@@ -63,7 +63,7 @@ function CreatePost()
         });
         
         const uuid = uid();
-        set(ref(db, "post/"+u_id+"/"+title),
+        set(ref(db, "post/"+title),
         {
            u_id,
            title,
