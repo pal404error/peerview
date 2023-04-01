@@ -13,7 +13,7 @@ function LogOut() {
     const auth = getAuth();
     signOut(auth).then(() => {
       localStorage.clear()
-      navigate("/Login_page")
+      navigate("/login")
     }).catch((error) => {
       
     });
