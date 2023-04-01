@@ -1,14 +1,23 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
-import LogOut, { Test } from "./page/Test";
-import { AuthContextProvider } from "./context/AuthContext";
+
+import './App.css';
+import { Head } from './page/Head'
+import { Footer } from './page/Footer';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Router,
+} from "react-router-dom";
+import LogOut, { Test } from './page/Test';
+import { NavItem } from 'react-bootstrap';
+import SignIn, { Login_page } from './page/Login_page';
+import Post, {Post_page} from './page/Post_page';
+import CreatePost from './page/Page_creation';
+import ProfileLanding from './page/Profile_landing';
+import Feed from './page/Feed';
+import Postn from './page/Postn';
 import Private from "./comp/Private";
 import {Landing} from './Landing';
-import { NavItem } from "react-bootstrap";
-import SignIn, { Login_page } from "./page/Login_page";
-import Post, { Post_page } from "./page/Post_page";
-import CreatePost from "./page/Page_creation";;
-
 
 
 function App() {
@@ -16,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
         {/* <Header title="Todo List" searchBar={true} /> */}
 
         <AuthContextProvider>
@@ -32,6 +42,9 @@ function App() {
                 </Private>
               }
             />
+            
+  <Route exact path="Feed" element={<Feed/>}/>
+  <Route exact path="Create_new_post" element={<Postn/>}/>
             <Route
               exact
               path="post_creation"
