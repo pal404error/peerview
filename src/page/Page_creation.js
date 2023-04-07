@@ -20,12 +20,14 @@ function CreatePost()
     const [caption, setCaption] = useState("");
     const [url, setUrl] = useState("");
     var rating = 0;
+    var total_rating = 0;
 
     var u_id;
-
+    var name;
     if (user !== null) {
         user.providerData.forEach((profile) => {
           u_id = profile.uid;
+          name = profile.displayName;
         });
       }
 
@@ -70,6 +72,8 @@ function CreatePost()
            caption,
            url,
            rating,
+           name,
+           total_rating
         }); 
     };
 
@@ -82,7 +86,7 @@ function CreatePost()
             <div class="container" id="imgBox">
             <textarea id ="textBox" placeholder="Add caption:" onChange={handleCaption}></textarea>
             <input type="file" name="image" id="file" style={{display:"none"}} onChange={handdleImage}/>
-            <label for="file"><img src={require('./css/images/upload.png')} class="upload-icon" ></img></label>
+            <label for="file"><img src={require('./images/upload.png')} class="upload-icon" ></img></label>
             </div>
             </div>
             <div class="submit">

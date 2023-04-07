@@ -13,9 +13,20 @@ function LogOut() {
     const auth = getAuth();
     signOut(auth).then(() => {
       localStorage.clear()
-      navigate("/login")
+      navigate("/Login_page")
     }).catch((error) => {
       
+    });
+  }
+
+  const auth = getAuth();
+  const user = auth.currentUser;
+  var u_id;
+  var email;
+  var name;
+  if (user !== null) {
+    user.providerData.forEach((profile) => {
+      u_id = profile.uid;
     });
   }
 

@@ -78,7 +78,6 @@ export const Postn = () => {
       }
       await addDoc(collection(fdb, 'todos'), {
         text: input,
-        // img: imageRef,
         completed: false,
       });
       setInput('');

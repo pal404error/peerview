@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Head } from './page/Head'
 import { Footer } from './page/Footer';
@@ -16,47 +15,32 @@ import CreatePost from './page/Page_creation';
 import ProfileLanding from './page/Profile_landing';
 import Feed from './page/Feed';
 import Postn from './page/Postn';
-import Private from "./comp/Private";
-import {Landing} from './Landing';
-
 
 function App() {
-  const data = (id) => {};
+
+  const data = (id) => {
+
+  }
   return (
     <div className="App">
       <BrowserRouter>
 
-        {/* <Header title="Todo List" searchBar={true} /> */}
+{/* <Header title="Todo List" searchBar={true} /> */}
 
-        <AuthContextProvider>
-          <Routes>
-            <Route exact path="/land" element={<Landing />} />
-            <Route exact path="login" element={<SignIn />} />
-            <Route exact path="New_Post" element={<Post />} />
-            <Route
-              exact
-              path="Homepage"
-              element={
-                <Private>
-                  <LogOut />
-                </Private>
-              }
-            />
-            
+
+<Routes>
+ 
+  <Route exact path="/" element={<LogOut/>} />
+  <Route exact path="Login_page" element={<SignIn/>} />
+  <Route exact path="New_Post" element={<Post/>}/>
+  <Route exact path="Homepage" element={<LogOut/>}/>
+  <Route exact path="post_creation" element={<CreatePost/>}/>
+  <Route exact path="Profile_landing" element={<ProfileLanding/>}/>
   <Route exact path="Feed" element={<Feed/>}/>
   <Route exact path="Create_new_post" element={<Postn/>}/>
-            <Route
-              exact
-              path="post_creation"
-              element={
-                <Private>
-                  <CreatePost />
-                </Private>
-              }
-            />
-          </Routes>
-        </AuthContextProvider>
-      </BrowserRouter>
+</Routes>
+
+</BrowserRouter>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/profile_landing_style.css";
+import "./profile_landing_style.css";
 import { getAuth } from "firebase/auth"
 
 function ProfileLanding()
@@ -15,8 +15,9 @@ function ProfileLanding()
       }
     return(
         <>
-            <div className="container1">
+            <div className="container">
                 <div className="profile-box">
+                    
 
                 </div>
             </div>

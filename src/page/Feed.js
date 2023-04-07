@@ -4,35 +4,42 @@ import { set, ref, onValue, onChildAdded, get, child, update } from "firebase/da
 import {db} from "../firebase"
 import { useState, useEffect } from 'react';
 import Post from "./Post_page";
+import { useRoutes } from "react-router-dom";
+import PostTemplate from "./Post_template";
+
 
 function Feed()
 {
         const [post, setPost] = useState([]);
-        let users = [];
-        var title = [];
-        const starCountRef = ref(db);
-        get(child(starCountRef, "post")).then((snapshot) => {
+        useEffect(() => {
+          const starCountRef = ref(db);
+          get(child(starCountRef, "post")).then((snapshot) => {
             if (snapshot.exists()) {
-              snapshot.forEach(
-                function(childSnapshot){
-                    users.push(childSnapshot.val()); 
-                } 
-              )
-              setPost(users);
+              const users = [];
+              snapshot.forEach((childSnapshot) => {
+                users.push(childSnapshot.val()); 
+              });
+              setPost(users);  
             } else {
               console.log("post");
             }
           }).catch((error) => {
             console.error(error);
-          });         
+          });
+        }, []);
+          console.log(post);   
           
-          console.log(typeof post);
-
         return(
             <>
-            <h2 id="h2">jayur</h2>
-            <Card url="/jayur/" ccaption="jayur" name="jayur"/>
             
+
+            <ul>
+            {post.map((title, index) => (
+              <>
+              <PostTemplate key={index} user={title}/>
+              </>
+            ))}
+            </ul>
             </>
         )
 }
